@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "59582579934",
+    "firebase_url": "https://fir-realtimedbexample-cbf63.firebaseio.com",
+    "project_id": "fir-realtimedbexample-cbf63",
+    "storage_bucket": "fir-realtimedbexample-cbf63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59582579934:android:51cbb37be7199c5b5aae4f",
+        "android_client_info": {
+          "package_name": "c.tatastrive.firebaserealtimedatabaseexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59582579934-va57vo5uibc43cv5e6bc6gnhqf4iqtrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQRLpvPTS-Q3qJOoVLfHd78QV0v_HZ5eM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59582579934-va57vo5uibc43cv5e6bc6gnhqf4iqtrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
