@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Activity_UI extends AppCompatActivity {
     public static String test = "Your Task App";
     String uId = "Testing";
+    String post_key;
     static DatabaseReference databaseReference;
 
     EditText e_title,e_notes,editTextTitleUpdate,editTextNotesUpdate ;
@@ -35,7 +36,9 @@ public class Activity_UI extends AppCompatActivity {
         e_notes=findViewById(R.id.edit_Notes);
         btn_save=findViewById(R.id.btn_Save);
 
-        editTextNotesUpdate=findViewById(R.id.)
+        editTextNotesUpdate=findViewById(R.id.edit_Notes_update);
+        editTextTitleUpdate=findViewById(R.id.edit_Title_update);
+        btn_update=findViewById(R.id.btn_Update);
 
 
         btn_save.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +63,24 @@ public class Activity_UI extends AppCompatActivity {
                 }
                 Toast.makeText(Activity_UI.this, "Data Inserted ", Toast.LENGTH_SHORT).show();
                 //alertDialog.dismiss();
+
+            }
+        });
+        btn_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String u_title = editTextTitleUpdate.getText().toString().trim();
+                String u_note = editTextNotesUpdate.getText().toString().trim();
+
+                editTextTitleUpdate.setText(u_title);
+                editTextTitleUpdate.setSelection(u_title.length());
+
+                editTextNotesUpdate.setText(u_note);
+                editTextNotesUpdate.setSelection(u_title.length());
+
+                String uDate = DateFormat.getDateInstance().format(new Date());
+                Data udata = new Data(u_title, u_note, uDate, post_key);
+                databaseReference.child(post_key).setValue(udata);
 
             }
         });
